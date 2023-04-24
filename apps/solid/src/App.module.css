@@ -1,0 +1,59 @@
+body {
+  background: rgba(34,34,34,1)
+}
+
+.App {
+  text-align: center;
+  color: white;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  max-width: 1240px;
+}
+
+.header {
+  color: white;
+  text-align: center;
+  font-size: 48px;
+  padding-top: 20px;
+  vertical-align: text-bottom;
+}
+
+.header > * {
+  vertical-align: text-bottom;
+}
+
+
+li {
+  list-style-type: none;
+  padding: 10px;
+  border: 1px solid grey;
+  display: inline-block;
+  width: 50%;
+}
+
+@media (min-width: 420px) {
+  li {
+    width: 33%;
+  }
+}
+
+@media (min-width: 640px) {
+  li {
+    width: 20%;
+  }
+}
+
+@media (min-width: 960px) {
+  li {
+    width: 10%;
+  }
+}
+
+@media (min-width: 1200px) {
+  li {
+    width: 8%;
+  }
+}
+
