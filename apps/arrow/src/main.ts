@@ -27,8 +27,6 @@ const data = reactive({
   list,
 });
 
-console.log(data);
-
 html`
   <header><img src="${logo}" alt="" height="50" /></header>
   <ul>
