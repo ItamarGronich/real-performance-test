@@ -13,7 +13,7 @@ const list = createList();
      - list [Proxy]
       - (0) { id: 0, name: 'sdfsdf' } [Proxy]
       - (1) { id: 1, name: 'abcdef' } [Proxy] 
-  Therefore, updating anything, even by reference works.
+  Therefore, updating anything, even child elements by reference works.
 
   This is different than in Vue where vue only creates a proxy for the root item.
   So updating child items doesn't work.
