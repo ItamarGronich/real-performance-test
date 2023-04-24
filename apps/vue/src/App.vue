@@ -1,10 +1,16 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
-import { createList } from './utils/list'
+import { createList, token } from './utils/list'
 
 const state = reactive({ list: createList() })
 
-state.list = createList()
+console.log(state)
+
+setInterval(() => {
+  for (let i = 0; i < state.list.length; i++) {
+    state.list[i].name = token()
+  }
+}, 10)
 </script>
 
 <template>
