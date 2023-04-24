@@ -11,7 +11,7 @@ const list = createList();
    like so:
    data [Proxy]
      - list [Proxy]
-      - (0) { id: 0, name: 'sdfsdf' }  [Proxy]
+      - (0) { id: 0, name: 'sdfsdf' } [Proxy]
       - (1) { id: 1, name: 'abcdef' } [Proxy] 
   Therefore, updating anything, even by reference works.
 
