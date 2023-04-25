@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { createList, token } from "./utils/list";
 import { measureCallsPerSecond } from "./utils/logging";
+import { useStateBuffered } from "./custom-hooks/useStateBuffered";
 
 function ListItem({ name }: { name: string }) {
   return <li>{name}</li>;
@@ -11,7 +12,7 @@ function ListItem({ name }: { name: string }) {
 let intervals: number[] | null = null;
 
 function App() {
-  const [list, setList] = useState(createList());
+  const [list, setList] = useStateBuffered(createList());
 
   useEffect(() => {
     intervals =

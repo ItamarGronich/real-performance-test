@@ -1,10 +1,20 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
-import { createList } from './utils/list'
+import { createList, token } from './utils/list'
 
+// In vue reactive only creates a root level Proxy and the rest is just simple data.
+// In contrast - ArrowJS will create proxies for each nested data recursively.
 const state = reactive({ list: createList() })
 
-state.list = createList()
+setInterval(() => {
+  for (let i = 0; i < state.list.length; i++) {
+    // Because of the fact that it's only a root Proxy, you always have to update the data by accessing through the root proxy.
+    // meaning you can't do this: state.list.forEach(el => el.name = token())
+    // or you can't pass one of the values by ref to a function.
+    // You always have to mutate through the full path.
+    state.list[i].name = token()
+  }
+}, 10)
 </script>
 
 <template>
