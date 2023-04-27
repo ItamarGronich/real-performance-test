@@ -4,7 +4,7 @@ export function token() {
 
 export function createList() {
   const list = [];
-  for (let i = 0; i < 500; i++) {
+  for (let i = 1; i <= 500; i++) {
     list.push({ name: token(), id: i });
   }
   return list;
